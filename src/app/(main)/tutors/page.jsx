@@ -1,9 +1,20 @@
+import TutorCard from '@/component/TutorCard'
 import React from 'react'
 
-const Tutors = () => {
+const Tutors = async () => {
+  const res = await fetch("http://localhost:5000/destination")
+  const tutorData = await res.json()
+  console.log(tutorData)
   return (
     <div>
-      Tutors page
+      <h1 className=''>Our Tutors</h1>
+      <div>
+        {
+          tutorData.map(item => <TutorCard item = {item} key={item._id}>
+            
+          </TutorCard>)
+        }
+      </div>
     </div>
   )
 }

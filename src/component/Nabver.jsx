@@ -21,7 +21,7 @@ const { data: session, isPending } = authClient.useSession()
   </>
 
   return (
-    <div className="navbar bg-base-100 shadow-sm overflow-hidden">
+    <div className="sticky top-0 z-50 navbar bg-base-100 shadow-sm ">
       <div className="flex justify-between items-center container w-11/12 mx-auto">
         
         {/* Left */}
@@ -52,7 +52,8 @@ const { data: session, isPending } = authClient.useSession()
             </ul>
           </div>
 
-          <a className="btn bg-white border-none hover:shadow-none">
+          <a className="btn bg-white border-none hover:shadow-none h-13 overflow-hidden">
+
             <Image src={logo} alt="source" width={230}/>
           </a>
         </div>
@@ -68,7 +69,7 @@ const { data: session, isPending } = authClient.useSession()
         <div className="navbar-end gap-3">
           
           {/* Search */}
-          {/* <StyledWrapper>
+          <StyledWrapper>
             <div className="containers">
               <input
                 type="text"
@@ -105,7 +106,7 @@ const { data: session, isPending } = authClient.useSession()
                 </svg>
               </div>
             </div>
-          </StyledWrapper> */}
+          </StyledWrapper>
 
           {/* Cart */}
           <div className="dropdown dropdown-end">
@@ -164,7 +165,7 @@ const { data: session, isPending } = authClient.useSession()
       </div>
       <ul
         tabIndex="-1"
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
         <li>
           <a className="justify-between">
             Profile
@@ -175,8 +176,8 @@ const { data: session, isPending } = authClient.useSession()
         <div  className='w-full flex justify-center'>
         <button onClick={async ()=> await authClient.signOut()} className=' group  btn px-10 bg-blue-500 text-white hover:text-blue-600 hover:bg-white transition duration-300'>
           LogOut
-          <span className='p-1 bg-amber-400 group-hover:bg-[#5C1621] rounded-full group-hover:rotate-45 transition duration-300 '>
-          <GoArrowUpRight className='text-xl text-white'/>
+          <span className='  group-hover:text-blue-500  group-hover:rotate-45 transition duration-300 '>
+          <GoArrowUpRight  className='text-xl '/>
           </span>
         </button>
         </div>
