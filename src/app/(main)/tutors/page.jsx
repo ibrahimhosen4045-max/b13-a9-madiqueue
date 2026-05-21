@@ -8,8 +8,8 @@ const Tutors = async () => {
   console.log(tutorData)
   return (
     <div>
-      <OuterBanner></OuterBanner>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 w-11/12 mx-auto max-w-7xl'>
+      {/* <OuterBanner></OuterBanner> */}
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 w-11/12 mx-auto max-w-7xl py-10'>
         {
           tutorData.map(item => <TutorCard item = {item} key={item._id}>
             
